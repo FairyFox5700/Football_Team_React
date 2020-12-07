@@ -46,8 +46,6 @@ const Header = () => {
     const classes = useStyles();
     return (
         <div className={"App"}>
-            {console.log("asas")}
-            {console.log(API_URL)}
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
                     <Container maxWidth="lg" className={classes.navDisplayFlex}>

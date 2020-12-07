@@ -19,14 +19,9 @@ import SeasonsList from "../containers/seasones/seasoneList";
 import ClubDetails from "../containers/clubs/clubsDetails";
 import FootballersCardList from "../containers/footballers/footballerCardList";
 import Main from "../components/hero";
-import RoleWithPlayersTabs from "../containers/roles/footballerGrid";
 import ResponsiveDrawer from "../containers/roles/rolesDrawer";
 import FootballerForm from "../containers/footballers/addFootballerForm";
-import macthesList from "../containers/match/macthesList";
-import MatchesList from "../containers/match/macthesList";
-import MatchesTable from "../containers/match/matchesTable";
 import MatchPage from "../containers/match/macthesList";
-import HashRouter from "react-router-dom/modules/HashRouter";
 export default class Routing extends React.Component {
     render() {
         return (
