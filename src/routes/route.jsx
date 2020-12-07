@@ -26,10 +26,12 @@ import macthesList from "../containers/match/macthesList";
 import MatchesList from "../containers/match/macthesList";
 import MatchesTable from "../containers/match/matchesTable";
 import MatchPage from "../containers/match/macthesList";
+import HashRouter from "react-router-dom/modules/HashRouter";
 export default class Routing extends React.Component {
     render() {
         return (
             <main>
+                <HashRouter basename="/">
                 <Switch>
                     <Route path="/home" component ={Main}/>
                     <Route exact path="/about" component={About} />
@@ -47,6 +49,7 @@ export default class Routing extends React.Component {
                     <Route path="/trainings" component={TrainingsList} />
                     <Route exact path="/" render={() => (<Redirect to="/home" />)} />
                 </Switch>
+                </HashRouter>
             </main>
         );
     }
