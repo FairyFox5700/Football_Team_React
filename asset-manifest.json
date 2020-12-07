@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Football_Team_React/static/css/main.4dbfff47.chunk.css",
+    "main.js": "/Football_Team_React/static/js/main.56d0c688.chunk.js",
+    "main.js.map": "/Football_Team_React/static/js/main.56d0c688.chunk.js.map",
+    "runtime-main.js": "/Football_Team_React/static/js/runtime-main.01d0ea21.js",
+    "runtime-main.js.map": "/Football_Team_React/static/js/runtime-main.01d0ea21.js.map",
+    "static/js/2.11a931f8.chunk.js": "/Football_Team_React/static/js/2.11a931f8.chunk.js",
+    "static/js/2.11a931f8.chunk.js.map": "/Football_Team_React/static/js/2.11a931f8.chunk.js.map",
+    "index.html": "/Football_Team_React/index.html",
+    "static/css/main.4dbfff47.chunk.css.map": "/Football_Team_React/static/css/main.4dbfff47.chunk.css.map",
+    "static/js/2.11a931f8.chunk.js.LICENSE.txt": "/Football_Team_React/static/js/2.11a931f8.chunk.js.LICENSE.txt",
+    "static/media/png-clipart-soccer-bal.f4cd51aa.png": "/Football_Team_React/static/media/png-clipart-soccer-bal.f4cd51aa.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01d0ea21.js",
+    "static/js/2.11a931f8.chunk.js",
+    "static/css/main.4dbfff47.chunk.css",
+    "static/js/main.56d0c688.chunk.js"
+  ]
+}
