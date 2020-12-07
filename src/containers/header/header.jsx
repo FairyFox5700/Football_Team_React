@@ -15,6 +15,7 @@ import {BrowserRouter} from "react-router-dom";
 import {ToastProvider} from "react-toast-notifications";
 import Routing from "../../routes/route";
 import {Provider} from "react-redux";
+import {API_URL} from "../config";
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -45,7 +46,8 @@ const Header = () => {
     const classes = useStyles();
     return (
         <div className={"App"}>
-            ({console.log(process.env.API_URL)})
+            {console.log("asas")}
+            {console.log(API_URL)}
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
                     <Container maxWidth="lg" className={classes.navDisplayFlex}>

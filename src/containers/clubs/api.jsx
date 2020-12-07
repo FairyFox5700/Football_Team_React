@@ -1,6 +1,8 @@
 ﻿import axios from "axios";
+import {API_URL} from "../config";
 
-const baseUrl = process.env.API_URL
+
+const baseUrl = API_URL
 
 export default {
     clubs(url = baseUrl + 'footballClub/') {
