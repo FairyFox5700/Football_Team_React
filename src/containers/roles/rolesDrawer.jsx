@@ -1,24 +1,15 @@
-﻿import React, {useEffect} from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
+﻿import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {connect, useDispatch, useSelector} from "react-redux";
 import {fetchAll} from "./rolesActions";
 import {withStyles} from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import CollectionItem from "../footballers/footballerCollectionCardItem";
 import FootballersCardList from "../footballers/footballerCardList";
 import {bindActionCreators} from "redux";
 
@@ -170,7 +161,7 @@ const mapStateToProps = state => {
 
 const  mapDispatchToProp = (dispatch) => {
     return {
-        fetchAll :  bindActionCreators(fetchAll, dispatch),
+        fetchAll :bindActionCreators(fetchAll, dispatch),
     }
 }
 export default connect(mapStateToProps, mapDispatchToProp)(withStyles(styles)(ResponsiveDrawer));

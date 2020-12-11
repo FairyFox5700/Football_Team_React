@@ -1,14 +1,15 @@
-﻿﻿import React, {  useEffect } from "react";
+﻿import React, {  useEffect } from "react";
+import moment from "moment";
 import * as actions from "../footballers/footballersActions";
 import {connect, useDispatch, useSelector} from "react-redux";
 import {withStyles} from "@material-ui/core";
 import {useToasts} from "react-toast-notifications";
 import  {fetchByPlayerId} from "../clubs/footballClubsAction"
 import  {fetchTotalResultsByPlayerId} from "../footballerResults/footballResultsActions"
-import ClubList from "../clubs/footballClubsList";
 import  PieChart from "../../components/charts/pirChart"
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
+import ClubList from "../clubs/footballClubsList";
 
 
 const styles =theme => ({
@@ -90,8 +91,7 @@ const FootballerDetails = ({match, classes,...props  }) => {
         };
     }, [personId])
 
-    //toast msg.
-    const { addToast } = useToasts()
+
 
     const resultIsLoading = props.results===undefined || props.results===null || props.results.length ===0;
     return (
@@ -117,7 +117,7 @@ const FootballerDetails = ({match, classes,...props  }) => {
                                         <p className={classes.property}><span
                                             className={classes.nestedProp}>Nationality:</span>{footballer.nationality}</p>
                                         <p className={classes.property}><span
-                                            className={classes.nestedProp}>Data of birth:</span> {footballer.dataOfBirth}</p>
+                                            className={classes.nestedProp}>Data of birth:</span> {moment(footballer.dataOfBirth).format("DD/MM/YYYY")}</p>
                                         <p className={classes.property}><span
                                             className={classes.nestedProp}>Height:</span>{footballer.height}</p>
                                         <p className={classes.property}><span

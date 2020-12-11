@@ -11,11 +11,10 @@ import {
 } from "@material-ui/core";
 import { Home } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
-import {BrowserRouter} from "react-router-dom";
 import {ToastProvider} from "react-toast-notifications";
+import { HashRouter } from 'react-router-dom'
 import Routing from "../../routes/route";
-import {Provider} from "react-redux";
-import {API_URL} from "../config";
+
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -35,17 +34,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const navLinks = [
-    { title: `about`, path: `/about` },
-    { title: `clubs`, path: `/clubs` },
-    { title: `players`, path: `/footballers` },
-    { title: `results`, path: `/results` },  
-    { title: `macthes`, path: `/matches` },
+    { title: `about`, path: `about` },
+    { title: `clubs`, path: `clubs` },
+    { title: `players`, path: `/Football_Team_React/footballers` },
+    { title: `results`, path: `/Football_Team_React/results` },  
+    { title: `macthes`, path: `/Football_Team_React/matches` },
 ];
 
 const Header = () => {
     const classes = useStyles();
     return (
         <div className={"App"}>
+           
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
                     <Container maxWidth="lg" className={classes.navDisplayFlex}>
@@ -57,7 +57,6 @@ const Header = () => {
                             aria-labelledby="main navigation"
                             className={classes.navDisplayFlex}
                         >
-                          
                             {navLinks.map(({ title, path }) => (
                                 <a href={path} key={title} className={classes.linkText}>
                                     <ListItem button>
@@ -69,12 +68,11 @@ const Header = () => {
                     </Container>
                 </Toolbar>
             </AppBar>
-            <BrowserRouter>
+            <HashRouter >
                 <ToastProvider autoDismiss={true}>
-                    <Routing />
-
+                    <Routing/>
                 </ToastProvider>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 };

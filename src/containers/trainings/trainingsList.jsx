@@ -19,8 +19,6 @@ const styles = theme => ({
 
 const TrainingsList  = ({ classes, ...props }) => {
 
-    const [currentId, setCurrentId] = useState(0)
-
     useEffect(() => {
         props.fetchAllTrainings()
     }, [])

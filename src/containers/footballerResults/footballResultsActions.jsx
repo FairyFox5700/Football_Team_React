@@ -11,7 +11,6 @@ import {
     FETCH_TOTAL_RESULTS_BY_PLAYER_ID_REQUEST,
     FETCH_TOTAL_RESULTS_BY_PLAYER_ID_SUCCESS
 } from "./footballResultsConstants";
-import axios from "axios";
 
 
 export const fetchAllByMatchId= (matchId) => dispatch => {

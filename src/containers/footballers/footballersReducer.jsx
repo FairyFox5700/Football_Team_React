@@ -28,12 +28,12 @@ export const footballers =(state = INITIAL_STATE, action)=> {
         case UPDATE_PLAYERS_WITH_ROLES_REQUEST:
             return {
                 ...state,
-                footballers: state.footballers.map(x => x.personId == action.payload.playerId  ? action.payload : x)
+                footballers: state.footballers.map(x => x.personId === action.payload.playerId  ? action.payload : x)
             }
         case DELETE_PLAYERS_REQUEST:
             return {
                 ...state,
-                footballers:state.list.filter(x => x.personId != action.payload)
+                footballers:state.list.filter(x => x.personId !== action.payload)
             }
         case FETCH_PLAYERS_SUCCESS:
             return {

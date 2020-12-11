@@ -2,7 +2,6 @@
 import {connect, useDispatch, useSelector} from "react-redux";
 import * as actions from "./seasonesAction";
 import { Grid, Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, withStyles } from "@material-ui/core";
-import { useToasts } from "react-toast-notifications";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles((theme) => ({
@@ -20,8 +19,6 @@ const useStyles = makeStyles((theme) => ({
 
 const SeasonsList  = (props) => {
   
-    const [isLoading, setIsLoading] = useState(true);
-    const [seasonesList, setSeasonesList] = useState([]);
 
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -75,7 +72,7 @@ const mapDispatchToProp = {
     fetchAllSeasones: actions.fetchAllByClubId,
 }
 
-export default SeasonsList
+export default  connect(mapStateToProps, mapDispatchToProp)(SeasonsList);
 
 
 

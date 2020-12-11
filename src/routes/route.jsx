@@ -25,25 +25,23 @@ import MatchPage from "../containers/match/macthesList";
 export default class Routing extends React.Component {
     render() {
         return (
-            <main>
-                <Switch>
-                    <Route path="/home" component ={Main}/>
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/clubs" component={ClubList} />
-                    <Route exact path="/roles" component={ResponsiveDrawer} />
-                    <Route exact path="/results" component={FootballResultTable} />
-                    <Route exact path="/matches" component={MatchPage} />
-                    <Route exact path="/footballers" component={FootballersCardList} /> 
-                    <Route exact path="/footballer-form" component={FootballerForm} />
-                    <Route exact path="/footballer-form/:personId" component={FootballerForm} />
-                    <Route path="/footballers/:personId" component={FootballerDetails} />
-                    <Route path="/sponsors/:clubId" component={SponsorsList} />
-                    <Route path="/seasons/:clubId" component={SeasonsList} />
-                    <Route path="/clubs/:clubId" component={ClubDetails} />
-                    <Route path="/trainings" component={TrainingsList} />
+            <>
+                    <Route path="/Football_Team_React/home" render={() =>(Main)}/>
+                    <Route exact path="Football_Team_React/about" render={() =>(About)} />
+                    <Route exact path="/Football_Team_React/clubs" render={() =>(ClubList)} />
+                    <Route exact path="/roles" render={() =>(ResponsiveDrawer)} />
+                    <Route exact path="/results" render={() =>(FootballResultTable)} />
+                    <Route exact path="/matches" render={() =>(MatchPage)} />
+                    <Route exact path="/footballers" render={() =>(FootballersCardList)} /> 
+                    <Route exact path="/footballer-form" render={() =>(FootballerForm)} />
+                    <Route exact path="/footballer-form/:personId" render={() =>(FootballerForm)} />
+                    <Route path="/footballers/:personId" render={() =>(FootballerDetails)} />
+                    <Route path="/sponsors/:clubId" render={() =>(SponsorsList)} />
+                    <Route path="/seasons/:clubId" render={() =>(SeasonsList)} />
+                    <Route path="/clubs/:clubId" render={() =>(ClubDetails)} />
+                    <Route path="/trainings" render={() =>(TrainingsList)} />
                     <Route exact path="/" render={() => (<Redirect to="/home" />)} />
-                </Switch>
-            </main>
+                    </>
         );
     }
 };

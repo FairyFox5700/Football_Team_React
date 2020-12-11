@@ -11,7 +11,6 @@ import {connect, useDispatch, useSelector} from "react-redux";
 import {useToasts} from "react-toast-notifications";
 import {Grid} from "@material-ui/core";
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -69,24 +68,24 @@ console.log(200)
                                 <TableContainer>
                                     <Table>
                                         <TableHead className={classes.root}>
-                                            <TableRow>
+                                            <StyledTableRow>
                                                 <StyledTableCell>Result Id</StyledTableCell>
                                                 <StyledTableCell >ScoredGoals</StyledTableCell>
                                                 <StyledTableCell>MissedGoals</StyledTableCell>
                                                 <StyledTableCell >RedCardCount</StyledTableCell>
                                                 <StyledTableCell >YellowCardCount</StyledTableCell>
-                                            </TableRow>
+                                            </StyledTableRow>
                                         </TableHead>
                                         <TableBody>
                                             {
                                                 results.map((record,index) => {
-                                                    return (<TableRow key={index} hover>
-                                                            <TableCell>{index}</TableCell>
-                                                            <TableCell>{record.scoredGoals}</TableCell>
-                                                            <TableCell>{record.missedGoals}</TableCell>
-                                                            <TableCell>{record.redCardCount}</TableCell>
-                                                            <TableCell>{record.yellowCardCount}</TableCell>
-                                                          </TableRow>
+                                                    return (<StyledTableRow key={index} hover>
+                                                            <StyledTableCell>{index}</StyledTableCell>
+                                                            <StyledTableCell>{record.scoredGoals}</StyledTableCell>
+                                                            <StyledTableCell>{record.missedGoals}</StyledTableCell>
+                                                            <StyledTableCell>{record.redCardCount}</StyledTableCell>
+                                                            <StyledTableCell>{record.yellowCardCount}</StyledTableCell>
+                                                          </StyledTableRow>
                                                     )
                                                 })
                                                 
@@ -102,36 +101,7 @@ console.log(200)
         </div>
     );
 }
-/* return (
-     <TableContainer component={Paper}>
-         <Table className={classes.table} aria-label="customized table">
-             <TableHead>
-                 <StyledTableRow>
-                     <StyledTableCell>Result Id</StyledTableCell>
-                     <StyledTableCell align="right">ScoredGoals</StyledTableCell>
-                     <StyledTableCell align="right">MissedGoals</StyledTableCell>
-                     <StyledTableCell align="right">RedCardCount</StyledTableCell>
-                     <StyledTableCell align="right">YellowCardCount</StyledTableCell>
-                 </StyledTableRow>
-             </TableHead>
-                 <TableBody>
-                     {
-                   props.results.map((record) => {
-                             return (<StyledTableRow key={record.resultId} hover>
-                                     <StyledTableCell>{record.resultId}</StyledTableCell>
-                                     <StyledTableCell>{record.scoredGoals}</StyledTableCell>
-                                     <StyledTableCell>{record.missedGoals}</StyledTableCell>
-                                     <StyledTableCell>{record.redCardCount}</StyledTableCell>
-                                     <StyledTableCell>{record.yellowCardCount}</StyledTableCell>
-                                 </StyledTableRow>
-                             )
-                         })
-                     }
-             </TableBody>
-         </Table>
-     </TableContainer>
- );
-}*/
+
 
 const mapStateToProps = state => ({
     results: state.footballResults.results

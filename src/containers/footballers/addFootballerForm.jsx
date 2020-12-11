@@ -12,9 +12,6 @@ import {
     KeyboardDatePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from "@date-io/date-fns";
-import {fetchAllWithRoles} from "./footballersActions";
-import {fetchByPlayerId} from "../clubs/footballClubsAction";
-import api from "./api";
 
 const styles = theme => ({
     root: {
@@ -142,7 +139,7 @@ const FootballerForm = ({match, classes, ...props  }) => {
                 resetForm()
                 addToast("Submitted successfully", { appearance: 'success' })
             }
-            if (personId===undefined)
+            if (personId!==undefined)
                 props.createFootballer(values,onSuccess)
             else
                 props.updateFootballer(personId, values,onSuccess)
