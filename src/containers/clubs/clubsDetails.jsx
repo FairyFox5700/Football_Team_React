@@ -1,11 +1,18 @@
-﻿import React, {useEffect} from 'react';
+﻿import React, {Suspense, useEffect, useState} from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import {TableCell, TableRow} from "@material-ui/core";
 import {useToasts} from "react-toast-notifications";
+import {Link} from "react-router-dom";
 import * as actions from "./footballClubsAction";
 import {connect, useDispatch, useSelector} from "react-redux";
+import SeasonsList from "../seasones/seasoneList";
+import SponsorsList from "../sponsores/sponsoresList";
 import withStyles from "@material-ui/core/styles/withStyles";
+import api from "./api";
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -59,15 +66,17 @@ const ClubDetails= ({  match, classes,...props  }) => {
         params: { clubId },
     } = match;
     const dispatch = useDispatch();
-  
+    const clubDetails = useSelector((state) => state.clubs);
+    const { club , loading, error } = clubDetails;
     useEffect(() => {
+       
         dispatch(actions.fetchById(clubId))
         return () => {
         };
     }, [clubId]);
-    const clubDetails = useSelector((state) => state.clubs);
-    const { club , loading, error } = clubDetails;
 
+    //toast msg.
+    const { addToast } = useToasts()
     return (
         <div>
             

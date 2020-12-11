@@ -19,15 +19,20 @@ import SeasonsList from "../containers/seasones/seasoneList";
 import ClubDetails from "../containers/clubs/clubsDetails";
 import FootballersCardList from "../containers/footballers/footballerCardList";
 import Main from "../components/hero";
+import RoleWithPlayersTabs from "../containers/roles/footballerGrid";
 import ResponsiveDrawer from "../containers/roles/rolesDrawer";
 import FootballerForm from "../containers/footballers/addFootballerForm";
+import macthesList from "../containers/match/macthesList";
+import MatchesList from "../containers/match/macthesList";
+import MatchesTable from "../containers/match/matchesTable";
 import MatchPage from "../containers/match/macthesList";
 export default class Routing extends React.Component {
     render() {
         return (
-            <>
-                    <Route path="/home" component={Main}/>
-                    <Route exact path="//about" component={About} />
+            <main>
+                <Switch>
+                    <Route path="/home" component ={Main}/>
+                    <Route exact path="/about" component={About} />
                     <Route exact path="/clubs" component={ClubList} />
                     <Route exact path="/roles" component={ResponsiveDrawer} />
                     <Route exact path="/results" component={FootballResultTable} />
@@ -41,7 +46,8 @@ export default class Routing extends React.Component {
                     <Route path="/clubs/:clubId" component={ClubDetails} />
                     <Route path="/trainings" component={TrainingsList} />
                     <Route exact path="/" render={() => (<Redirect to="/home" />)} />
-                    </>
+                </Switch>
+            </main>
         );
     }
 };

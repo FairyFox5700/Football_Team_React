@@ -11,10 +11,10 @@ import {
 } from "@material-ui/core";
 import { Home } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
+import {BrowserRouter} from "react-router-dom";
 import {ToastProvider} from "react-toast-notifications";
-import { BrowserRouter} from 'react-router-dom'
 import Routing from "../../routes/route";
-
+import {Provider} from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -34,18 +34,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const navLinks = [
-    { title: `about`, path: `about` },
-    { title: `clubs`, path: `clubs` },
-    { title: `players`, path: `footballers` },
-    { title: `results`, path: `results` },  
-    { title: `macthes`, path: `matches` },
+    { title: `about`, path: `/about` },
+    { title: `clubs`, path: `/clubs` },
+    { title: `players`, path: `/footballers` },
+    { title: `results`, path: `/results` },  
+    { title: `macthes`, path: `/matches` },
 ];
 
 const Header = () => {
     const classes = useStyles();
     return (
         <div className={"App"}>
-           
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
                     <Container maxWidth="lg" className={classes.navDisplayFlex}>
@@ -57,6 +56,7 @@ const Header = () => {
                             aria-labelledby="main navigation"
                             className={classes.navDisplayFlex}
                         >
+                            
                             {navLinks.map(({ title, path }) => (
                                 <a href={path} key={title} className={classes.linkText}>
                                     <ListItem button>
@@ -68,9 +68,10 @@ const Header = () => {
                     </Container>
                 </Toolbar>
             </AppBar>
-            <BrowserRouter >
+            <BrowserRouter>
                 <ToastProvider autoDismiss={true}>
-                    <Routing/>
+                    <Routing />
+
                 </ToastProvider>
             </BrowserRouter>
         </div>

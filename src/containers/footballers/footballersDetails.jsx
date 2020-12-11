@@ -1,15 +1,16 @@
+﻿import moment from "moment";
+
 ﻿import React, {  useEffect } from "react";
-import moment from "moment";
 import * as actions from "../footballers/footballersActions";
 import {connect, useDispatch, useSelector} from "react-redux";
 import {withStyles} from "@material-ui/core";
 import {useToasts} from "react-toast-notifications";
 import  {fetchByPlayerId} from "../clubs/footballClubsAction"
 import  {fetchTotalResultsByPlayerId} from "../footballerResults/footballResultsActions"
+import ClubList from "../clubs/footballClubsList";
 import  PieChart from "../../components/charts/pirChart"
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import ClubList from "../clubs/footballClubsList";
 
 
 const styles =theme => ({
@@ -91,7 +92,8 @@ const FootballerDetails = ({match, classes,...props  }) => {
         };
     }, [personId])
 
-
+    //toast msg.
+    const { addToast } = useToasts()
 
     const resultIsLoading = props.results===undefined || props.results===null || props.results.length ===0;
     return (

@@ -1,8 +1,7 @@
-﻿import {API_URL} from "../config";
+﻿﻿﻿﻿﻿﻿import axios from "axios";
 
-﻿﻿﻿﻿﻿import axios from "axios";
+const baseUrl = "http://localhost:12250/api/"
 
-const baseUrl = API_URL
 export default {
 
     sponsores(url = baseUrl + 'seasons/') {

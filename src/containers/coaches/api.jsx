@@ -1,8 +1,6 @@
-﻿import {API_URL} from "../config";
+﻿﻿﻿import axios from "axios";
 
-﻿﻿import axios from "axios";
-
-const baseUrl = API_URL
+const baseUrl = "http://localhost:12250/api/"
 
 export default {
 
