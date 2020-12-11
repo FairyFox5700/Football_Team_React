@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.461b0847.chunk.css",
-    "main.js": "/static/js/main.51dc32a9.chunk.js",
+    "main.js": "/static/js/main.1954632b.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.8e785da2.js",
-    "static/js/2.ac67e9d3.chunk.js": "/static/js/2.ac67e9d3.chunk.js",
+    "static/js/2.9f203775.chunk.js": "/static/js/2.9f203775.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.ac67e9d3.chunk.js.LICENSE.txt": "/static/js/2.ac67e9d3.chunk.js.LICENSE.txt",
+    "static/js/2.9f203775.chunk.js.LICENSE.txt": "/static/js/2.9f203775.chunk.js.LICENSE.txt",
     "static/media/png-clipart-soccer-bal.f4cd51aa.png": "/static/media/png-clipart-soccer-bal.f4cd51aa.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8e785da2.js",
-    "static/js/2.ac67e9d3.chunk.js",
+    "static/js/2.9f203775.chunk.js",
     "static/css/main.461b0847.chunk.css",
-    "static/js/main.51dc32a9.chunk.js"
+    "static/js/main.1954632b.chunk.js"
   ]
 }
