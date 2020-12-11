@@ -12,7 +12,7 @@ import {
 import { Home } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import {ToastProvider} from "react-toast-notifications";
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
 import Routing from "../../routes/route";
 
 
@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
 const navLinks = [
     { title: `about`, path: `about` },
     { title: `clubs`, path: `clubs` },
-    { title: `players`, path: `/Football_Team_React/footballers` },
-    { title: `results`, path: `/Football_Team_React/results` },  
-    { title: `macthes`, path: `/Football_Team_React/matches` },
+    { title: `players`, path: `footballers` },
+    { title: `results`, path: `results` },  
+    { title: `macthes`, path: `matches` },
 ];
 
 const Header = () => {
@@ -68,11 +68,11 @@ const Header = () => {
                     </Container>
                 </Toolbar>
             </AppBar>
-            <HashRouter >
+            <BrowserRouter >
                 <ToastProvider autoDismiss={true}>
                     <Routing/>
                 </ToastProvider>
-            </HashRouter>
+            </BrowserRouter>
         </div>
     );
 };
