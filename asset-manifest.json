@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Football_Team_React/static/css/main.461b0847.chunk.css",
-    "main.js": "/Football_Team_React/static/js/main.69cb65ef.chunk.js",
+    "main.js": "/Football_Team_React/static/js/main.0648f640.chunk.js",
     "runtime-main.js": "/Football_Team_React/static/js/runtime-main.01d0ea21.js",
     "static/js/2.ac67e9d3.chunk.js": "/Football_Team_React/static/js/2.ac67e9d3.chunk.js",
     "index.html": "/Football_Team_React/index.html",
@@ -12,6 +12,6 @@
     "static/js/runtime-main.01d0ea21.js",
     "static/js/2.ac67e9d3.chunk.js",
     "static/css/main.461b0847.chunk.css",
-    "static/js/main.69cb65ef.chunk.js"
+    "static/js/main.0648f640.chunk.js"
   ]
 }
