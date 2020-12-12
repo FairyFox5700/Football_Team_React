@@ -26,7 +26,7 @@ const ClubList  = ({ clubs,classes, ...props }) => {
 
     const dispatch = useDispatch();
     const clubDetails = useSelector((state) => state.clubs);
-    const { loading, error } = clubDetails;
+    const { loading, error } = clubDetails
     useEffect(() => {
         if(clubs === undefined || clubs.length===0){
             dispatch(actions.fetchAll())
