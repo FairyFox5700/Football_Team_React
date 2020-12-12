@@ -1,4 +1,4 @@
-import App from './containers/App';
+import App from './App';
 import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';
 import  {ThemeProvider} from '@material-ui/core/styles';
