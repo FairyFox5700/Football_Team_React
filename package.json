@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://FairyFox5700.github.io/FootballTeam_Web_DB_App",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
     "@date-io/date-fns": "^1.3.13",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@testing-library/jest-dom": "^5.11.6",
