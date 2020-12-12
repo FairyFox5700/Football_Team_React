@@ -34,7 +34,7 @@ export const fetchAll= () => async dispatch => {
     }
     catch(err ) {
         console.log(err)
-        dispatch({ type: FETCH_FOOTBALL_CLUB_LIST_SUCCESS, payload: err.message  });
+        dispatch({ type: FETCH_FOOTBALL_CLUB_LIST_ERROR, payload: err.message  });
     }
 }
 
