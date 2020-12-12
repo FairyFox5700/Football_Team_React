@@ -1,10 +1,9 @@
-﻿﻿﻿import axios from "axios";
-
-const baseUrl = "http://localhost:12250/api/"
+﻿import {API_URL} from "../config";
+import axios from "axios";
 
 export default {
 
-    coaches(url = baseUrl + 'coaches/') {
+    coaches(url = API_URL + 'coaches/') {
         return {
             fetchById: coachId => axios.get(url + coachId),
         }

@@ -1,10 +1,9 @@
-﻿﻿﻿import axios from "axios";
-
-const baseUrl = "http://localhost:12250/api/"
+﻿import {API_URL} from "../config";
+import axios from "axios";
 
 export default {
 
-    matches(url = baseUrl + 'matches/') {
+    matches(url = API_URL + 'matches/') {
         return {
             fetchAll: () => axios.get(url),
             fetchById: matchId => axios.get(url + matchId),

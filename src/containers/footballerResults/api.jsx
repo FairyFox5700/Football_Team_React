@@ -1,9 +1,8 @@
-﻿﻿﻿﻿import axios from "axios";
-
-const baseUrl = "http://localhost:12250/api/"
+﻿import {API_URL} from "../config";
+import axios from "axios";
 
 export default {
-    footballResults(url = baseUrl + 'footballersResults/') {
+    footballResults(url = API_URL + 'footballersResults/') {
         return {
             fetchAllWithPlayers: () => axios.get( url+"player"),
             fetchAllByMatchId: matchId => axios.get(url +"match/"+ matchId),
