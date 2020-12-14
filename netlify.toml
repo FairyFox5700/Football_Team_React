@@ -1,6 +1,11 @@
 [[redirects]]
+ from = "/clubs/*"
+ to = "/clubs/:splat"
+ status = 200
+ force = true
+ 
+[[redirects]]
   from = "/*"
   to = "/"
-  query = {path = ":path"}
   status = 200
 
