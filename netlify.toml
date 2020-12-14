@@ -1,11 +1,4 @@
 [[redirects]]
- from = "/clubs/:clubid"
- to = "/"
- status = 200
- force = true
- 
-[[redirects]]
   from = "/*"
-  to = "/"
+  to = "/index.html"
   status = 200
-
