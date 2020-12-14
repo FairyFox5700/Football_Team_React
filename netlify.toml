@@ -1,6 +1,6 @@
 [[redirects]]
- from = "/clubs/*"
- to = "/clubs/:splat"
+ from = "/clubs/:clubid"
+ to = "/clubs/"
  status = 200
  force = true
  
