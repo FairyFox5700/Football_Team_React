@@ -5,11 +5,6 @@ import {
     FOOTBALL_CLUB_DETAIL_ERROR, FOOTBALL_CLUB_DETAIL_REQUEST, FOOTBALL_CLUB_DETAIL_SUCCESS
 } from "./footballClubsConstants";
 import api from "./api";
-import {
-    FETCH_RESULTS_WITH_PLAYERS_ERROR,
-    FETCH_RESULTS_WITH_PLAYERS_REQUEST,
-    FETCH_RESULTS_WITH_PLAYERS_SUCCESS
-} from "../footballerResults/footballResultsConstants";
 
 export const fetchById = (clubId) => async dispatch => {
     try{

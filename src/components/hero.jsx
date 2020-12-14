@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Pagination from "@material-ui/lab/Pagination";
 import FootballersCardList from "../containers/footballers/footballerCardList";
+import hero from '../images/main-hero-footballer.jpg';
 
 const useStyles = makeStyles((theme) => ({
     mainText:{
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     hero: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-         url('https://vectorgrovepreview.azureedge.net/c/b42/cb4285e.jpg?st=2019-11-06T10%3A03%3A41Z&se=2039-12-31T22%3A00%3A00Z&sp=r&sv=2018-03-28&sr=c&sig=zblTCxEF2g7nMxSIOzivUbXvPyq%2B%2Fz5hxWjVoAbSdWw%3D')`,
+         url(${hero})`,
         height: "500px",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
