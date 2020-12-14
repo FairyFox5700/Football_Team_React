@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import {TableCell, TableRow} from "@material-ui/core";
 import {useToasts} from "react-toast-notifications";
-import {Link, Redirect, Route, Switch} from "react-router-dom";
+import {Link} from "react-router-dom";
 import * as actions from "./footballClubsAction";
 import {connect, useDispatch, useSelector} from "react-redux";
 import SeasonsList from "../seasones/seasoneList";
@@ -19,16 +19,6 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Container from "@material-ui/core/Container";
-import Main from "../../components/hero";
-import About from "../about/about";
-import ClubList from "./footballClubsList";
-import ResponsiveDrawer from "../roles/rolesDrawer";
-import FootballResultTable from "../footballerResults/footballResultsList";
-import MatchPage from "../match/macthesList";
-import FootballersCardList from "../footballers/footballerCardList";
-import FootballerForm from "../footballers/addFootballerForm";
-import FootballerDetails from "../footballers/footballersDetails";
-import TrainingsList from "../trainings/trainingsList";
 
 const styles =theme => ({
     container: {
@@ -140,9 +130,6 @@ const ClubDetails= ({  match, classes,...props  }) => {
                     </Container>
                 </>)
             }
-            <Switch>
-                <Route path={`${match.path}/:clubId`} component={ClubDetails} />
-            </Switch>
       </div>
     );
 }

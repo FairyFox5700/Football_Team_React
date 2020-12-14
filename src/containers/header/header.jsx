@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { Home } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter } from "react-router-dom";
 import {ToastProvider} from "react-toast-notifications";
 import Routing from "../../routes/route";
 import {Provider} from "react-redux";
@@ -68,12 +68,12 @@ const Header = () => {
                     </Container>
                 </Toolbar>
             </AppBar>
-            <BrowserRouter>
+            <HashRouter >
                 <ToastProvider autoDismiss={true}>
                     <Routing />
 
                 </ToastProvider>
-            </BrowserRouter>
+            </HashRouter >
         </div>
     );
 };

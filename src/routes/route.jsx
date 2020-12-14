@@ -32,7 +32,6 @@ export default class Routing extends React.Component {
             <main>
                 <Switch>
                     <Route path="/home" component ={Main}/>
-                    <Route  path={`:clubId`} component={ClubDetails} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/clubs" component={ClubList} />
                     <Route exact path="/roles" component={ResponsiveDrawer} />
@@ -44,7 +43,7 @@ export default class Routing extends React.Component {
                     <Route path="/footballers/:personId" component={FootballerDetails} />
                     <Route path="/sponsors/:clubId" component={SponsorsList} />
                     <Route path="/seasons/:clubId" component={SeasonsList} />
-                    <Route path="/clubs/:clubId" component={ClubDetails} />
+                    <Route exact path="/clubs/:clubId" component={ClubDetails} />
                     <Route path="/trainings" component={TrainingsList} />
                     <Route exact path="/" render={() => (<Redirect to="/home" />)} />
                 </Switch>
