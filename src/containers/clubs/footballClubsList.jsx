@@ -46,7 +46,7 @@ const ClubList  = ({ clubs,classes, ...props }) => {
                     <div>{error} </div>
                 ) : (
                     <>
-                        <Container maxWidth='lg'>
+                        <Container maxWidth='md'>
                             <Paper className={classes.paper} elevation={3}>
                                 <Grid container>
                                     <Grid item xs={12}>
@@ -69,9 +69,10 @@ const ClubList  = ({ clubs,classes, ...props }) => {
                                                             return (<TableRow key={record.footballClubId} hover>
                                                                     <TableCell>{record.footballClubId}</TableCell>
                                                                     <TableCell>
-                                                                        <Link to={`/clubs/${record.footballClubId}`}>
+                                                                
+                                                                        <a href={`/clubs/${record.footballClubId}`}>
                                                                             {record.footballClubName}
-                                                                        </Link>
+                                                                        </a>
                                                                     </TableCell>
                                                                     <TableCell>
                                                                         {!logosIsEmpty?

@@ -21,10 +21,10 @@ export const footballResults = (state = INITIAL_STATE, action)=> {
     console.log(action.type)
     console.log(action.payload);
     switch (action.type) {
-        case FETCH_RESULTS_WITH_PLAYERS_REQUEST:
         case FETCH_TOTAL_RESULTS_BY_PLAYER_ID_REQUEST:
         case FETCH_TOTAL_RESULTS_BY_MATCH_ID_REQUEST:
-            return {
+        case FETCH_RESULTS_WITH_PLAYERS_REQUEST:
+                return {
                 loading: true
             }
         case FETCH_TOTAL_RESULTS_BY_MATCH_ID_SUCCESS:

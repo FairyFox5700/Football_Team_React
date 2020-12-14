@@ -66,17 +66,18 @@ const ClubDetails= ({  match, classes,...props  }) => {
         params: { clubId },
     } = match;
     const dispatch = useDispatch();
-    const clubDetails = useSelector((state) => state.clubs);
-    const { club , loading, error } = clubDetails;
+
     useEffect(() => {
-       
-        dispatch(actions.fetchById(clubId))
-        return () => {
-        };
-    }, [clubId]);
+        props.fetchClubById(clubId)
+        //dispatch(actions.fetchById(clubId))
+        //return () => {
+        //};
+    }, [])
 
     //toast msg.
-    const { addToast } = useToasts()
+    const { addToast } = useToasts();
+    const clubDetails = useSelector((state) => state.clubs);
+    const { club , loading, error } = clubDetails;
     return (
         <div>
             

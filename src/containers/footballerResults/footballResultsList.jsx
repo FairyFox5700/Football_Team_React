@@ -12,24 +12,10 @@ import {useToasts} from "react-toast-notifications";
 import {Grid} from "@material-ui/core";
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import Container from "@material-ui/core/Container";
 
-const StyledTableCell = withStyles((theme) => ({
-    head: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
-    },
-    body: {
-        fontSize: 18,
-    },
-}))(TableCell);
 
-const StyledTableRow = withStyles((theme) => ({
-    root: {
-        '&:nth-of-type(odd)': {
-            backgroundColor: theme.palette.action.hover,
-        },
-    },
-}))(TableRow);
+
 
 const useStyles = {
     table: {
@@ -40,23 +26,24 @@ const useStyles = {
 const FootballResultTable = ({ classes, ...props }) => {
     console.info("In table row")
     const dispatch = useDispatch();
-    const footballDetails = useSelector((state) => state.footballResults);
-    const { results , loading, error } = footballDetails
+
     useEffect(() => {
         dispatch(actions.fetchAllWithPlayers())
         return () => {
         };
     }, []);
-;
-console.log(200)
+    
+    const footballDetails = useSelector((state) => state.footballResults);
+    const { results , loading, error } = footballDetails
+    console.log(200)
     console.log(results)
 
     //toast msg.
     const { addToast } = useToasts()
 
     return (
+        <Container maxWidth="md">
         <div>
-
             {loading ? (
                 <div>Loading...</div>
             ) : error ? (
@@ -70,11 +57,11 @@ console.log(200)
                                     <Table>
                                         <TableHead className={classes.root}>
                                             <TableRow>
-                                                <StyledTableCell>Result Id</StyledTableCell>
-                                                <StyledTableCell >ScoredGoals</StyledTableCell>
-                                                <StyledTableCell>MissedGoals</StyledTableCell>
-                                                <StyledTableCell >RedCardCount</StyledTableCell>
-                                                <StyledTableCell >YellowCardCount</StyledTableCell>
+                                                <TableCell>Result Id</TableCell>
+                                                <TableCell >ScoredGoals</TableCell>
+                                                <TableCell>MissedGoals</TableCell>
+                                                <TableCell >RedCardCount</TableCell>
+                                                <TableCell >YellowCardCount</TableCell>
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
@@ -100,38 +87,10 @@ console.log(200)
                 </>)
             }
         </div>
+         </Container>
     );
 }
-/* return (
-     <TableContainer component={Paper}>
-         <Table className={classes.table} aria-label="customized table">
-             <TableHead>
-                 <StyledTableRow>
-                     <StyledTableCell>Result Id</StyledTableCell>
-                     <StyledTableCell align="right">ScoredGoals</StyledTableCell>
-                     <StyledTableCell align="right">MissedGoals</StyledTableCell>
-                     <StyledTableCell align="right">RedCardCount</StyledTableCell>
-                     <StyledTableCell align="right">YellowCardCount</StyledTableCell>
-                 </StyledTableRow>
-             </TableHead>
-                 <TableBody>
-                     {
-                   props.results.map((record) => {
-                             return (<StyledTableRow key={record.resultId} hover>
-                                     <StyledTableCell>{record.resultId}</StyledTableCell>
-                                     <StyledTableCell>{record.scoredGoals}</StyledTableCell>
-                                     <StyledTableCell>{record.missedGoals}</StyledTableCell>
-                                     <StyledTableCell>{record.redCardCount}</StyledTableCell>
-                                     <StyledTableCell>{record.yellowCardCount}</StyledTableCell>
-                                 </StyledTableRow>
-                             )
-                         })
-                     }
-             </TableBody>
-         </Table>
-     </TableContainer>
- );
-}*/
+
 
 const mapStateToProps = state => ({
     results: state.footballResults.results

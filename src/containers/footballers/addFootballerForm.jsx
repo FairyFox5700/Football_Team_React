@@ -156,11 +156,7 @@ const FootballerForm = ({match, classes, ...props  }) => {
     useEffect( () => {
         if (!(personId===undefined) ) {
             try {
-                  dispatch(actions.fetchById(personId))
-                console.log("adsasdasdasdasda")
-                console.log(footballer )
-              
-
+                dispatch(actions.fetchById(personId))
                 return () => {
                 };
        
