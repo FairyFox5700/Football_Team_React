@@ -1,4 +1,11 @@
 [[redirects]]
+  from = "/clubs/"
+  to = "/index.html"
+  status = 200
+  force = false
+  query = {path = ":clubId"} #  apply this rule for /old-path?path=example
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
