@@ -32,6 +32,7 @@ export default class Routing extends React.Component {
             <main>
                 <Switch>
                     <Route path="/home" component ={Main}/>
+                    <Route  path={`:clubId`} component={ClubDetails} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/clubs" component={ClubList} />
                     <Route exact path="/roles" component={ResponsiveDrawer} />
