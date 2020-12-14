@@ -70,9 +70,9 @@ const ClubList  = ({ clubs,classes, ...props }) => {
                                                                     <TableCell>{record.footballClubId}</TableCell>
                                                                     <TableCell>
                                                                 
-                                                                        <link to={`/clubs/${record.footballClubId}`}>
+                                                                        <Link to={`/clubs/${record.footballClubId}`}>
                                                                             {record.footballClubName}
-                                                                        </link>
+                                                                        </Link>
                                                                     </TableCell>
                                                                     <TableCell>
                                                                         {!logosIsEmpty?
