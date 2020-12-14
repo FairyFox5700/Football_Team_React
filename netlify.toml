@@ -1,9 +1,6 @@
 [[redirects]]
   from = "/*"
   to = "/"
+  query = {path = ":path"}
   status = 200
-  
-[[redirects]]
-  from = "/clubs/*"
-  to = "/clubs/"
-  status = 200
+
